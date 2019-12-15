@@ -3,6 +3,7 @@
 # Part 1: Getting Started
 
 import turtle
+import os
 
 wn = turtle.Screen()
 wn.title("Pong by @TokyoEdTech")
@@ -91,6 +92,7 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
+        os.system("aplay bounce.wav&")
 
     if ball.ycor() < -290:
         ball.sety(-290)
